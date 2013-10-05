@@ -1,0 +1,101 @@
+#cws_page_general h5{
+	margin: 0;
+}
+#cws_page_general .meta_group {
+	padding-bottom: 17px;
+	border-bottom: 1px solid lightgray;
+}
+#cws_page_general .meta_group:last-child {
+	padding-bottom: 4px;
+	border: 0 none;
+}
+#cws_page_general .meta_sidebar h5{
+	float: left;
+	width: 50%;
+}
+#cws_page_general .meta_sidebar ._check {
+	float: left;
+	width: 10%;
+}
+#cws_page_general .meta_content .meta-box-item {
+	display: none;
+}
+
+#cws_page_general .sideActive {
+    display: block !important;
+}
+
+#cws_page_general .meta_group select, #cws_page_general .meta_group input {
+    min-width: 200px;
+    height: 25px;
+}
+
+#cws_page_general  .meta_content {}
+
+.widget_gray_divider{
+    border-bottom: 1px solid #DFDFDF;
+    margin: 0 0 12px;
+}
+
+#cws_button_list {
+   width: 400px;
+   z-index:9999;
+   position:relative;
+   display: none; 
+}
+
+#cws_button_list .top_ul {
+    width:40%; border: 1px solid #D1D1D1; background-color: #EAEAEA;
+    border-radius: 2px;
+}
+
+#cws_button_list .top_ul li {
+    border-bottom: 1px solid #D1D1D1;
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    padding: 8px 10px 5px;
+    position: relative;
+}
+#cws_button_list .top_ul li .sub_ul {
+    position: absolute; border: 1px solid #D1D1D1; width: 100%; left: 100%; top: 0px; display: none; background-color: #EAEAEA; border-radius: 2px;
+}
+
+#cws_button_list .noarray_link {
+    display: block;
+    width: 100%;
+}
+
+#cws_button_list .top_ul li .sub_ul li {}
+#cws_button_list .top_ul li .sub_ul li .sub_ul_codes {
+    position: absolute; border: 1px solid #D1D1D1; width: 100%; left: 100%; top: 0px; display: none; background-color: #EAEAEA; border-radius: 2px;
+}
+
+#cws_button_list .top_ul li .sub_ul li .sub_ul_codes li {}
+
+#cws_button_list .top_ul li:last-child, #cws_button_list .top_ul li .sub_ul li:last-child, #cws_button_list .top_ul li .sub_ul li .sub_ul_codes li:last-child {
+    border-bottom: 0 outside none;
+}
+
+.noarray_link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#cws_button_list .top_ul li:hover {
+    background-color: #FFF;
+}
+
+#cws_slideshow input, #cws_slideshow textarea {
+    width: 100%;
+}
+
+#cws_portfolio input, #cws_portfolio textarea {
+    width: 100%;
+}
+#cws_single textarea {
+    width: 100%;
+}

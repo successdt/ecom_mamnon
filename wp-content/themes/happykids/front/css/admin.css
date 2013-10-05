@@ -1,0 +1,433 @@
+/* - CSS Reset -> Begin ----------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none
+}
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* - CSS Reset -> End ----------------------------------------- */
+
+body {
+   font-family: Arial;
+}
+
+.clear {
+    clear:both;
+}
+
+/* -- Header --> Begin -- */
+
+#header {
+    background: url('../images/admin/header_bg.png') repeat 0 0 transparent;
+    padding:58px 0 0 0;
+    position: relative;
+    border-bottom:1px solid #202d3a;
+}
+
+#header .logo {
+    position: absolute;
+    top:16px;
+    left:10px;
+}
+
+#header .navigation_wrapper {
+    background: url('../images/admin/nav_wrapper_bg.png') repeat-x bottom left transparent;
+    padding:0 0 5px 173px;
+    overflow: hidden;
+}
+
+#navigation {
+    float:left;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+#navigation li {
+    float:left;
+    border-left:1px solid #202d3a;
+    border-top:1px solid #202d3a;
+}
+
+#navigation li:last-child {
+    border-right:1px solid #202d3a;
+    border-radius:0 4px 0 0;
+    -moz-border-radius:0 4px 0 0;
+    -webkit-border-radius:0 4px 0 0;
+}
+
+#navigation li:last-child a {
+    border-right:1px solid #566c80;
+    border-radius:0 3px 0 0;
+    -moz-border-radius:0 3px 0 0;
+    -webkit-border-radius:0 3px 0 0;
+}
+
+#navigation li:first-child {
+    border-radius:4px 0 0 0;
+    -moz-border-radius:4px 0 0 0;
+    -webkit-border-radius:4px 0 0 0;     
+}
+
+#navigation li:first-child a {
+    border-radius:3px 0 0 0;
+    -moz-border-radius:3px 0 0 0;
+    -webkit-border-radius:3px 0 0 0;    
+}
+
+#navigation li.active {
+    
+}
+
+#navigation li.active a {
+    background:#2e3a45;
+    border-color:#3c4c5a;
+    bottom: -2px;
+    margin-top: -2px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    position: relative;
+}
+
+#navigation a {
+    color:#fff;
+    text-decoration: none;
+    background: url('../images/admin/nav_item_bg.png') repeat-x left bottom #425362;
+    padding:16px 16px;
+    float:left;
+    border-left:1px solid #566c80;
+    border-top:1px solid #566c80;
+    text-shadow:1px 1px 0px #000;
+}
+
+/* -- Header --> End --*/
+
+#main_container {
+    background-color:#2c3945;
+    position: relative;
+    min-height:500px;
+}
+
+/* -- Content --> Begin -- */
+
+#content {
+    background-color:#e4e4e4;
+    height:100%;
+    margin-left:175px;
+}
+
+#content .content {
+    padding:25px 5px 25px 10px;
+}
+
+#content h1 {
+    background-color: #c7c7c7;
+    padding:5px 10px;
+    font-weight: normal;
+    margin-bottom:25px;
+}
+
+#content .form_row {
+    padding:10px 25px 10px 10px;
+    overflow:hidden;
+}
+
+#content .form_row.bordered {
+    border-top:2px solid #c8c8c8;
+}
+
+#content label {
+    font-size:13px;
+    line-height:1.3;
+    float:left;
+}
+
+#content input[type="text"] {
+    background-color: #c4c2c2;
+    border-top:1px solid #d6d5d5;
+    border-left:1px solid #d6d5d5;
+    border-right:1px solid #f3f3f3;
+    border-bottom:1px solid #f3f3f3;
+    float:right;
+    margin:4px 0 0 0;
+    height:15px;
+    line-height:15px;    
+    padding:4px 9px;
+    width:300px;
+}
+
+#content textarea {
+    border:1px solid #aaaaaa;
+    background-color: #fff;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    padding:5px 10px;
+    font-size:13px;
+    font-family: Arial;
+    resize:none;
+    width:300px;
+    height:135px;
+}
+
+#content strong {
+    display:block;
+}
+
+#content .pager {
+    overflow:hidden;
+}
+
+#content .pager a {
+    color:#969696;
+    font-size:12px;
+    text-decoration:none;
+    padding:0px 6px 0 5px;
+    display:block;
+    border:1px solid #a7a7a7;
+    border-radius:3px;
+    line-height:17px;
+}
+
+#content .pager a:hover {
+    background-color: #a7a7a7;
+    color:#fff;
+}
+
+#content .pager .active a {
+    background-color: #fff;
+    color:#777777;
+}
+
+#content .pager li {
+    float:left;
+    margin-right:8px;
+}
+
+#content .pager .prev a {
+    width:20px;
+    height:19px;
+    background:url('../images/admin/pager_bg.png') no-repeat 0 0 transparent;
+    border:none;
+    padding:0;
+}
+
+#content .pager .next a {
+    width:20px;
+    height:19px;
+    background:url('../images/admin/pager_bg.png') no-repeat 0 -19px transparent;    
+    border:none;
+    padding:0;
+}
+
+/* -- Content --> End -- */
+
+/* -- Sidebar --> Begin -- */
+
+#sidebar {
+    width:175px;
+    height: 100%;
+    float:left;
+}
+
+#sidebar_navigation {
+    font-weight: bold;
+    font-size:11px;
+    line-height:1.4;
+}
+
+#sidebar_navigation li {
+    display:block;
+    border:1px solid #202d3a;
+    border-left:none;
+    position:relative;
+    margin-top:-1px;
+    border-radius:0 4px 4px 0;
+}
+
+#sidebar_navigation .style a {
+    background-image:url('../images/admin/style_layout_icon.png');
+}
+
+#sidebar_navigation .font a {
+    background-image:url('../images/admin/font_icon.png');
+}
+
+#sidebar_navigation .page a {
+    background-image:url('../images/admin/settings_icon.png');
+}
+
+#sidebar_navigation .sliders a {
+    background-image:url('../images/admin/slider_icon.png');
+}
+
+#sidebar_navigation .shortcodes a {
+    background-image:url('../images/admin/shortcodes_icon.png');
+}
+
+#sidebar_navigation .google a {
+    background-image:url('../images/admin/google_icon.png');
+}
+
+#sidebar_navigation .language a {
+    background-image:url('../images/admin/language_icon.png');
+}
+
+#sidebar_navigation .help a {
+    background-image:url('../images/admin/help_icon.png');
+}
+
+#sidebar_navigation a {
+    color:#fff;
+    text-decoration: none;
+    padding:9px 4px 11px 38px;
+    display:block;
+    border:1px solid #566c80;
+    border-left:none;
+    border-radius:0 3px 3px 0;
+    background-color:#415261;
+    background-repeat: no-repeat;
+    background-position: 10px 50%;
+}
+
+#sidebar_navigation .active a,
+#sidebar_navigation a:hover {
+    background-color:#38434e;   
+}
+
+/* -- Sidebar --> End -- */
+
+/* -- Footer --> Begin -- */
+
+#footer {
+    background-color: #c7c7c7;
+    overflow: hidden;
+}
+
+#footer .siderbar {
+    background-color: #405160;
+    border:1px solid #202d3a;
+    border-bottom:none;
+    border-left:none;
+    float:left;
+    width:174px;
+}
+
+#footer .siderbar ul {
+    border: 1px solid #566c80;
+    border-left: none;
+    border-bottom: none;
+    display:block;
+    overflow:hidden;
+    padding:10px 15px 13px 15px;
+}
+
+#footer .siderbar li {
+    float:left;
+    margin-left:10px;
+}
+
+#footer .content {
+    margin-left:174px;
+    padding:10px 25px;
+}
+
+#footer .button {
+    background:url('../images/admin/button_left_bg.png') no-repeat left top transparent;
+    padding-left:4px;
+    color:#fff;
+    font-size:9px;
+    font-weight: bold;
+    text-decoration: none;
+    float:right;
+    margin:0 9px;
+    text-shadow:0px -1px 0px #00295c;
+}
+
+#footer .button > span {
+    background:url('../images/admin/button_right_bg.png') no-repeat right top transparent;
+    padding-right:4px;    
+    float:left;
+}
+
+#footer .button span span {
+    background:url('../images/admin/button_bg.png') repeat-x left top transparent;
+    padding:0 10px;        
+    float:left;
+    height:26px;
+    line-height:26px;
+}
+
+/* -- Footer --> End -- */
+
+/* -- Custom form elements --> Begin -- */
+
+.checkbox {
+	width: 66px;
+	height: 24px;
+	padding: 0;
+  margin:4px 0 0 0;
+	background: url(../images/admin/iOS_checkbox.png) no-repeat;
+	display: block;
+	float: right;
+}
+.radio {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	display: block;
+	clear: left;
+	float: left;    
+	background: url(radio.gif) no-repeat;
+}
+.select {
+	position: absolute;
+	width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 21px;
+	padding: 0 24px 0 8px;
+	color: #fff;
+	font: 12px/21px arial,sans-serif;
+	background: url(select.gif) no-repeat;
+	overflow: hidden;
+}
+
+/* -- Custom form elements --> End -- */
