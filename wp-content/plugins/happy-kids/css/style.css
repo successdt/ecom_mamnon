@@ -1,0 +1,108 @@
+.news-box {
+	display: table;
+	width: 100%;	
+	
+}
+.news-box ul {
+	list-style-type: none;
+}
+.news-post.first-news .title {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0px;
+	vertical-align: baseline;
+	background-color: transparent;
+	text-decoration: none;
+	color: #ff6600;
+	font-size: 16px;
+}
+.first-news img {
+	margin: 5px 15px 0 0;
+	padding: 0px;
+	outline: 0px;
+	vertical-align: baseline;
+	background-color: transparent;
+	float: left;
+	width: 100px;
+	height: 73px;
+}
+.first-news p {
+	margin: 0;
+}
+.first-news .pull-right {
+	margin-right: 10px;
+}
+.readmore-text {
+	display: block;
+	margin-bottom: 30px;
+} 
+.pull-right {
+	float: right;
+}
+.news-post {
+	float: left;
+	
+		
+}
+.news-box.inline .news-post {
+	max-width: 230px;
+}
+.news-box.inline .first-news{
+	max-width: 410px;
+	margin-right: 10px;
+}
+
+li.news-post .title {
+	text-decoration: none;
+	color: #ff6600;
+}
+.news-box-title {
+	padding: 5px 0;
+	background: url('../images/hcb-header.png') no-repeat right bottom;
+	
+	
+}
+.news-box-title a {
+	color: #891a1c !important;
+	font-size: 24px !important;
+}
+.news-box-nav li {
+	display: inline;
+	font-size: 14px;
+	margin-right: 10px;
+	color: #f5bc23;
+}
+.news-box-nav li a, .readmore-text a {
+	color: #f5bc23 !important;
+}
+.pager li {
+	display: inline;
+	margin-right: 5px;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+	background-color: #6FB7E9;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 3px 5px;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: #3C8DC5;
+}
