@@ -9,13 +9,24 @@ $config = array(
 );
 $options = array(
 
+
+	array(
+		"name" => "Video từ youtube",
+		"desc" => "",
+		"id" => "_format_video_youtube",
+		"type" => "text",
+		"default" => "",
+		"placeholder" => "Đường link của video",
+		"size" => "",
+		'width' => '150'
+	),
 	array(
 		"name" => "Video",
 		"desc" => "",
 		"id" => "_format_video",
 		"type" => "textarea",
 		"default" => "",
-		"placeholder" => "Embeded video block"
+		"placeholder" => "Mã nhúng của video"
 	),
 
 	//shortcode button list

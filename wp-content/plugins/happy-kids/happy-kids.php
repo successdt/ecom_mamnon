@@ -182,7 +182,7 @@ function large_news_box($atts){
 	if($category){
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		$queryObject = new  Wp_Query( array(
-			'showposts' => 2,
+			'showposts' => 10,
 			'post_type' => array('post'),
 			'category_name' => $category,
 			'orderby' => 1,
@@ -265,6 +265,97 @@ function large_news_box($atts){
 	return $str;
 }
 
+function gallery_box($atts){
+		extract(shortcode_atts(array(
+			'category' => ''
+		), $atts));
+		if($category){
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$queryObject = new  Wp_Query( array(
+				'showposts' => 20,
+				'post_type' => 'post',
+				'orderby' => 1,
+				'category_name' => $category,
+				'post_status' => 'publish',
+				'paged' => $paged
+			));
+			$str = '';
+
+			$str .= '<div class="gallery-items">';
+			while($queryObject->have_posts()):
+				$queryObject->the_post();
+				$gallery = get_post_gallery_images(get_the_ID());
+				if(isset($gallery[0]))
+					$thumb = '<img src="'. $gallery[0] .'" alt="' . wp_specialchars(get_the_title(), 1) . '" class="album-thumb">';
+//				add_image_size( 'news-post', 100, 100, true );
+//				$thumb = get_the_post_thumbnail(get_the_ID(), 'news-post', 'class=post-thumb');				
+				$str .= 
+					'<li class="gallery-item gallery-post">
+						<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+							$thumb .
+						'</a>';						
+						$str .=
+						'<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+							wp_specialchars(get_the_title(), 1) .
+						'</a>' .
+					'</li>';
+				$i++;
+			endwhile;
+			$str .= '</div>';			
+			$str .= wpbeginner_numeric_posts_nav($queryObject);			
+		}
+		
+		return $str;
+}
+
+function videos_box($atts){
+		extract(shortcode_atts(array(
+			'category' => ''
+		), $atts));
+		if($category){
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$queryObject = new  Wp_Query( array(
+				'showposts' => 20,
+				'post_type' => 'post',
+				'orderby' => 1,
+				'category_name' => $category,
+				'post_status' => 'publish',
+				'paged' => $paged
+			));
+			$str = '';
+
+			$str .= '<div class="videos-items">';
+			while($queryObject->have_posts()):
+				$queryObject->the_post();
+				$page_custom = theme_get_post_custom(get_the_ID());
+				$youtube['link'] = ( isset($page_custom['_format_video_youtube']) ) ? $page_custom['_format_video_youtube'] : '';
+			 	preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube['link'], $youtubeMatch);
+			 	$youtube['id'] = isset($youtubeMatch[1]) ? $youtubeMatch[1] : '';
+				$gallery = get_post_gallery_images(get_the_ID());
+				
+				if(isset($youtube['id']))
+					$thumb = '<img src="http://img.youtube.com/vi/'. $youtube['id'].'/sddefault.jpg" alt="' . wp_specialchars(get_the_title(), 1) . '" class="album-thumb">';
+//				add_image_size( 'news-post', 100, 100, true );
+//				$thumb = get_the_post_thumbnail(get_the_ID(), 'news-post', 'class=post-thumb');				
+				$str .= 
+					'<li class="gallery-item gallery-post">
+						<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+							$thumb .
+						'</a>';						
+						$str .=
+						'<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+							wp_specialchars(get_the_title(), 1) .
+						'</a>' .
+					'</li>';
+				$i++;
+			endwhile;
+			$str .= '</div>';			
+			$str .= wpbeginner_numeric_posts_nav($queryObject);			
+		}
+		
+		return $str;
+}
+
 function wpbeginner_numeric_posts_nav($wp_query) {
 
 	$str = '';
@@ -334,6 +425,8 @@ function wpbeginner_numeric_posts_nav($wp_query) {
 function register_shortcode(){
 	add_shortcode('news-box', 'news_box');
 	add_shortcode('large-news-box', 'large_news_box');
+	add_shortcode('gallery-box', 'gallery_box');
+	add_shortcode('videos-box', 'videos_box');
 }
 
 add_action('init', 'register_shortcode');

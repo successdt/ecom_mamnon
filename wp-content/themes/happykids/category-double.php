@@ -91,7 +91,8 @@
 				?>
 
 				<div class="entry">
-						<?php the_content(); ?>
+						<?php // the_content(); ?>
+						<?php the_excerpt(); ?>
 						<p style="margin: -20px 0px 10px;">
 							<a href="<?php the_permalink(); ?>" class="more link"><?php multitranslate("Read more...", "_tr_moar"); ?></a>
 						</p>
