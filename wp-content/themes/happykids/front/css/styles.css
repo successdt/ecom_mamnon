@@ -261,7 +261,7 @@ LAYOUT -> Begin
 */
 
 .l-page-width {
-    width: 940px;
+    width: 1004px;
     padding: 0 10px;
     text-align: left;
     margin: 0 auto;
@@ -269,7 +269,7 @@ LAYOUT -> Begin
 
 .l-page-width.no-padding {
 	padding: 0;
-    width: 968px;
+    width: 1032px;
 }
 
 .l-float-left {
@@ -3785,6 +3785,7 @@ div.vjs-big-play-button span {
 	background-position: center top;
     min-height: 362px;
     padding: 30px 34px;
+    background-size: 100% auto;        
 }
 
 .gl_col_2,
@@ -7060,11 +7061,11 @@ PAGES STYLES -> Begin
 
 #sbl #post-content {
 	float: right;
-	width: 650px;
+	width: 735px;
 }
 
 #sbr #post-content {
-	width: 650px;
+	width: 735px;
 	float: left;
 }
 
@@ -7074,7 +7075,7 @@ PAGES STYLES -> Begin
 
 #sbr #content {
 	float: left;
-	width: 630px;
+	width: 694px;
 }
 
 #sbr #sidebar,
@@ -7085,8 +7086,8 @@ PAGES STYLES -> Begin
 }
 
 #dsb #post-content {
-	width: 400px;
-	margin-left: 30px;
+	width: 510px;
+	margin-left: 10px;
 	float: left;
 }
 
@@ -8602,9 +8603,13 @@ span.search-excerpt {
 .cws_fullwidthblog #post-content {
 	width: 100% !important;
 }
-.cws_fullwidthblog #post-content .post-item {
-	width: 830px;
+
+@media only screen and (min-width: 960px) {
+	.cws_fullwidthblog #post-content .post-item {
+		width: 894px;
+	}
 }
+
 .entry-container .widget_pages .pages_w ul > li > a {
     background: url("../images/image.png") no-repeat scroll 0 9px transparent !important;
 }

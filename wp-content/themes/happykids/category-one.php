@@ -76,7 +76,8 @@
 					?>
 					
 					<div class="entry">
-						<?php the_content(); ?>
+						<?php // the_content(); ?>
+						<?php the_excerpt() ?>
 						<span class="l-float-right"><a href="<?php the_permalink(); ?>" class="more link"> <?php multitranslate("Read more...", "_tr_moar"); ?> </a></span>
 					</div><!--/ entry-->
 

@@ -106,3 +106,23 @@ li.news-post .title {
 .navigation li.active a {
 	background-color: #3C8DC5;
 }
+.gallery-post.gallery-item {
+	float: left;
+	text-align: center;
+	width: 160px !important;
+}
+.gallery-item.gallery-post a {
+	display: block;
+}
+.gallery-items {
+	list-style-type: none;
+}
+.gallery-items li, .videos-items li {
+	display: inline;
+}
+.videos-items {
+	list-style-type: none;
+}
+.videos-items li img {
+	max-width: 150px;
+}

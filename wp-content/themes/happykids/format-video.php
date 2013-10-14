@@ -2,7 +2,10 @@
 
 	$page_custom = theme_get_post_custom();
 	$video = ( isset($page_custom['_format_video']) ) ? $page_custom['_format_video'] : '';
-
+	$youtube['link'] = ( isset($page_custom['_format_video_youtube']) ) ? $page_custom['_format_video_youtube'] : '';
+ 	preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube['link'], $youtubeMatch);
+ 	$youtube['id'] = isset($youtubeMatch[1]) ? $youtubeMatch[1] : '';
+	
 	$categories = get_the_category();
 		$separator = ', ';
 		$output = '';
@@ -49,6 +52,10 @@
 	<div class="border-shadow">
 		<figure class="post_format_video">
 			<?php echo $video; ?>
+			<?php if($youtube['id']): ?>
+				<iframe width="420" height="420" src="//www.youtube.com/embed/<?php echo $youtube['id'] ?>" frameborder="0" allowfullscreen></iframe>
+			<?php endif ?>
+			
 		</figure>
 	</div><!--/ post-thumb-->
 
