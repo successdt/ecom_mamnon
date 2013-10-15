@@ -14,6 +14,25 @@ get_header();
 	//for double sidebar layout
 	$template = isset($gen_sets['_blog_template_select']) ? $gen_sets['_blog_template_select'] : '';
 	$side_l = ( isset($sets['_sidebar_main_blog_r']) ) ? $sets['_sidebar_main_blog_r'] : 3;
+	
+	$categories= get_the_category();
+	$type = 'post';
+	foreach($categories as $category){
+		$parentCategory = get_category_parents($category->term_id);
+		$parentCategories = explode('/', $parentCategory);
+		
+		$postTypes = array(
+			'kho-video' => 'video',
+			'thu-vien-anh' => 'image'
+		);
+		
+		foreach($postTypes as $slug => $postType) {
+			$videosCategory = get_category_by_slug($slug);
+			if(isset($videosCategory->name) && in_array($videosCategory->name, $parentCategories)) {
+				$type = $postType;
+			}
+		}		
+	}
 
 ?>
 </div><!-- .bg-level-1 -->
@@ -109,6 +128,12 @@ get_header();
 							<aside id="sidebar">
 								<?php
 									if ( function_exists('dynamic_sidebar') ){
+										if($type == 'video') {
+											$gen_side = 'sidebar-12';
+										}
+										if($type == 'image') {
+											$gen_side = 'sidebar-10';
+										}
 										if ($gen_side) {
 											dynamic_sidebar($gen_side );
 										}

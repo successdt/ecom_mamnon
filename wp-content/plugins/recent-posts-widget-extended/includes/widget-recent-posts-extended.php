@@ -64,19 +64,19 @@ class rpwe_widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
 
 		global $post;
-
+//			var_dump($cat);
 			$args = array(
 				'numberposts'	=> $limit,
-				'category__in'	=> $cat,
+//				'category__in'	=> $cat,
+				'category'		=> implode(',', $cat),
 				'tag__in'		=> $tag,
 				'post_type'		=> $post_type,
 				'offset'		=> $offset,
-				'order'			=> $order
+				'order'			=> $order,
 			);
 
 			$default_args 		= apply_filters( 'rpwe_default_query_arguments', $args ); // Allow developer to filter the query.
 			$rpwewidget 		= get_posts( $default_args );
-
 		?>
 
 		<div <?php echo( ! empty( $cssID ) ? 'id="' . $cssID . '"' : '' ); ?> class="rpwe-block">
@@ -84,7 +84,12 @@ class rpwe_widget extends WP_Widget {
 			<ul class="rpwe-ul">
 
 				<?php foreach ( $rpwewidget as $post ) : setup_postdata( $post ); ?>
-
+					<?php
+						$page_custom = theme_get_post_custom(get_the_ID());
+		 				$youtube['link'] = ( isset($page_custom['_format_video_youtube']) ) ? $page_custom['_format_video_youtube'] : '';
+					 	preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube['link'], $youtubeMatch);
+					 	$youtube['id'] = isset($youtubeMatch[1]) ? $youtubeMatch[1] : '';					
+					 ?>
 					<li class="rpwe-clearfix clearfix cl">
 
 						<?php if ( $thumb == true ) { ?>
@@ -98,6 +103,10 @@ class rpwe_widget extends WP_Widget {
 										the_post_thumbnail( array( $thumb_height, $thumb_width ), array( 'class' => $thumb_align . ' rpwe-thumb', 'alt' => esc_attr(get_the_title() ), 'title' => esc_attr( get_the_title() ) ) );
 									?>
 								</a>
+						 	<?php } elseif($youtube['id']) { ?>
+						 			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'rpwe' ), the_title_attribute('echo=0' ) ); ?>" rel="bookmark">
+										<?php echo '<img src="http://img.youtube.com/vi/'. $youtube['id'].'/default.jpg" class="rpwe-alignleft rpwe-thumb wp-post-image" alt="' . wp_specialchars(get_the_title(), 1) . '" class="album-thumb">'; ?>
+									</a>
 							<?php } else { ?>				
 								<?php if ( $thumb_default ) echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img class="' . $thumb_align . ' rpwe-thumb" src="' . $thumb_default . '" alt="' . esc_attr( get_the_title() ) . '"></a>'; ?>
 							<?php } ?>
