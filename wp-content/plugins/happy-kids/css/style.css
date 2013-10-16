@@ -129,7 +129,7 @@ li.news-post .title {
 #respond_block {
 	display: none;
 }
-.rpwe-block a img {
+.rpwe-block a img{
 	padding: 0px;
 	outline: 0px;
 	vertical-align: baseline;
@@ -138,6 +138,13 @@ li.news-post .title {
 	width: 100px;
 	height: 73px;
 }
-.rpwe-title {
+.rpwe-title, .rpwe-title a {
 	text-align: left !important;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#fbSEOComments {
+		display:none;
+	}
 }
