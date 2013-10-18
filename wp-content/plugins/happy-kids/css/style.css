@@ -148,3 +148,35 @@ li.news-post .title {
 		display:none;
 	}
 }
+.news-post .title {
+	padding-left: 20px;
+	background: url('../images/star.png') no-repeat left center;
+	background-size: auto 120%;
+}
+.news-post.first-news .title {
+	background: none;
+	padding-left: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+h3.rpwe-title a {
+	font-family: Arial !important;
+}
+img.post-thumb {
+border-style: solid;
+	border-width: 14px;
+	-moz-border-image: url('../images/border3.png') 14 round;
+	-webkit-border-image: url('../images/border3.png') 14 round;
+	-o-border-image: url('../images/border3.png') 14 round;
+	border-image: url('../images/border3.png') 14 fill round;
+}
+li.category-link a {
+	font-size: 18px;
+	font-family: butlong;
+}
+.news-post li {
+	margin-bottom: 5px;
+}
+#text-7 {
+	background: url('../images/fb border.png') top center;
+}

@@ -92,7 +92,7 @@ function news_box($atts){
 			'showposts' => 4,
 			'post_type' => array('post'),
 			'category_name' => $category,
-			'orderby' => 1,
+			'orderby' => 1
 		));
 		
 		if($queryObject->have_posts()):
@@ -110,7 +110,7 @@ function news_box($atts){
 				</div>
 				<div class="news-box-nav">
 					<ul>';
-			$childCategories = get_categories(array('child_of' => $cat->term_id, 'hide_empty' => 0));
+			$childCategories = get_categories(array('child_of' => $cat->term_id, 'hide_empty' => 0, 'parent' => $cat->term_id));
 			foreach($childCategories as $category):
 				$str .= '
 				<li class="category-link">
