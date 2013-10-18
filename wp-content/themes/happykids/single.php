@@ -77,7 +77,8 @@ get_header();
 				<?php if($template == 'full') : ?>
 				
 					<div class="entry-container cws_fullwidthblog" id="sbr">
-
+						<img class="ani-butterfly" src="/wp-content/plugins/happy-kids/images/butterfly.png" />
+						<img class="ani-bug" src="/wp-content/plugins/happy-kids/images/ladybug.png" />
 						<div id="post-content" class="blog">
 
 								<article class="post-item">
@@ -103,7 +104,8 @@ get_header();
 					<?php else : ?>
 
 						<div id="sbr" class="entry-container">
-
+								<img class="ani-butterfly" src="/wp-content/plugins/happy-kids/images/butterfly.png" />
+								<img class="ani-bug" src="/wp-content/plugins/happy-kids/images/ladybug.png" />
 								<div id="post-content">
 
 									<article class="post-item">

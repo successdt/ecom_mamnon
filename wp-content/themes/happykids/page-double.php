@@ -15,7 +15,8 @@
 ?>
 
 <div id="dsb" class="entry-container">
-
+		<img class="ani-butterfly" src="/wp-content/plugins/happy-kids/images/butterfly.png" />
+		<img class="ani-bug" src="/wp-content/plugins/happy-kids/images/ladybug.png" />
 		<aside id="sidebar-left">
 			<?php
 				if ( function_exists('dynamic_sidebar') && $custom_sidebar_trigger && $custom_sidebar_l ){

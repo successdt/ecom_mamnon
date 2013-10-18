@@ -189,7 +189,20 @@ li.category-link a {
 #text-5 {
 	background-image: url('../images/title/title_bg3.png');
 }
-#kids_header 
+#kids_header {
+	background: url('../images/sun1.png') top center no-repeat;
+	background-size: 120px;
+} 
 .navigation {
 	margin-top: 10px;
+}
+.ani-butterfly {
+	position: absolute;
+	left: -24px;
+	top: -32px;
+}
+.ani-bug {
+	position: absolute;
+	right: 50px;
+	top: -37px;
 }
