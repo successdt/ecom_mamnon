@@ -180,3 +180,16 @@ li.category-link a {
 #text-7 {
 	background: url('../images/fb border.png') top center;
 }
+#text-3 {
+	background-image: url('../images/title/title_bg7.png');
+}
+#text-4 {
+	background-image: url('../images/title/title_bg9.png');
+}
+#text-5 {
+	background-image: url('../images/title/title_bg3.png');
+}
+#kids_header 
+.navigation {
+	margin-top: 10px;
+}
