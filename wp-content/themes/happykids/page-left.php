@@ -11,7 +11,8 @@
 ?>
 
 <div id="sbl" class="entry-container">
-
+	<img class="ani-butterfly" src="/wp-content/plugins/happy-kids/images/butterfly.png" />
+	<img class="ani-bug" src="/wp-content/plugins/happy-kids/images/ladybug.png" />
 	<?php if(have_posts()) :  while(have_posts()) : the_post(); ?>
 
 		<div id="post-content">

@@ -28,7 +28,8 @@
 ?>
 
 <div class="entry-container" id="sbr">
-
+	<img class="ani-butterfly" src="/wp-content/plugins/happy-kids/images/butterfly.png" />
+	<img class="ani-bug" src="/wp-content/plugins/happy-kids/images/ladybug.png" />
 	<div id="post-content" class="blog <?php echo $type; ?>">
 		<?php
 		
