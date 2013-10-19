@@ -178,16 +178,19 @@ li.category-link a {
 	margin-bottom: 5px;
 }
 #text-7 {
-	background: url('../images/fb border.png') top center;
+	background: url('../images/fb border.png') top center no-repeat;
 }
 #text-3 {
 	background-image: url('../images/title/title_bg7.png');
+	background-repeat: no-repeat;
 }
 #text-4 {
 	background-image: url('../images/title/title_bg9.png');
+	background-repeat: no-repeat;
 }
 #text-5 {
 	background-image: url('../images/title/title_bg3.png');
+	background-repeat: no-repeat;
 }
 #kids_header {
 	background: url('../images/sun1.png') top center no-repeat;
