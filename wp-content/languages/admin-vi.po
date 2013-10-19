@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-09-19 19:07+0700\n"
+"PO-Revision-Date: 2013-10-19 23:32+0700\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11161,7 +11161,9 @@ msgstr "Đã lên kế hoạch"
 #: wp-admin/admin-footer.php:23
 msgid ""
 "Thank you for creating with <a href=\"http://wordpress.org/\">WordPress</a>."
-msgstr "Cám ơn bạn đã dùng sản phẩm của <a href=\"http://ecomwebpro\">EWP</a>."
+msgstr ""
+"Cám ơn bạn đã dùng sản phẩm của <a href=\"http://facebook.com/successdt"
+"\">ThanhDD</a>."
 
 #: wp-admin/admin.php:154
 msgid "Invalid plugin page"

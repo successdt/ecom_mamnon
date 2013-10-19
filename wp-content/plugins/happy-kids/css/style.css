@@ -209,3 +209,6 @@ li.category-link a {
 	right: 50px;
 	top: -37px;
 }
+.gallery-item {
+	margin: 0 10px 1.5em 10px !important;
+}
