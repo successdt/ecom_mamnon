@@ -6,7 +6,7 @@
    "items": [
     {
      "kind": "webfonts#webfont",
-     "family": "ABeeZee",
+     "family": "butlong",
      "variants": [
       "regular",
       "italic"

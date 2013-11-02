@@ -212,3 +212,26 @@ li.category-link a {
 .gallery-item {
 	margin: 0 10px 1.5em 10px !important;
 }
+body {
+	overflow-x: hidden;
+}
+.post-date .day {
+	height: 30px;
+}
+.post-date {
+	font-style: italic;
+}
+.post-date .time, .post-date .author {
+	color: #EC4112;
+}
+.post-entry .entry img {
+	max-width: 100%;
+	height: auto;
+}
+.post-entry .entry div {
+	max-width: 100%;
+}
+#wp-statistics ul li {
+	padding: 5px;
+	border-bottom: 1px solid #3069a4;
+}

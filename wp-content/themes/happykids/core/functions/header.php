@@ -77,7 +77,7 @@
 			echo '<li class="facebook"><a href="'. esc_url($gen_sets['_facebook']) .'" title="Facebook" target="_blank"></a></li>';
 		}
 		if ( isset($gen_sets['_vimeo']) && $gen_sets['_vimeo'] != ''){
-			echo '<li class="vimeo"><a href="'. esc_url($gen_sets['_vimeo']) .'" title="Vimeo" target="_blank"></a></li>';
+			echo '<li class="vimeo"><a href="'. esc_url($gen_sets['_vimeo']) .'" title="Youtube" target="_blank"></a></li>';
 		}
 		if ( isset($gen_sets['_flickr']) && $gen_sets['_flickr'] != ''){
 			echo '<li class="flickr"><a href="'. esc_url($gen_sets['_flickr']) .'" title="Twitter" target="_blank"></a></li>';

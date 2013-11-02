@@ -405,7 +405,7 @@ $options = array(
 					"name" => __("Header font", 'creaws_admin'),
 					"desc" => "",
 					"id" => "_headers_gfont",
-					"default" => "Jockey One",
+					"default" => "butlong",
 					"font_size" => 24,
 					"type" => "font_select"
 				),

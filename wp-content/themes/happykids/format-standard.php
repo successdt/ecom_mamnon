@@ -41,6 +41,15 @@
 	<div class="post-title">
 
 		<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+		<span class="post-date">
+			Đăng lúc: <span class="time"><?php echo get_the_time('d/m/y h:i') ?></span>
+			<?php
+			$author = get_post_meta( get_the_ID(), 'post_author');
+			if(!empty($author)): ?>
+			 - Người đăng: <span class="author"><?php echo $author[0] ; ?>	</span>
+			<?php endif ?>	
+		</span>
+
 	</div><!--/ post-title-->
 
 	<div class="entry">
