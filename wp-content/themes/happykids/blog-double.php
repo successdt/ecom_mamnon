@@ -126,7 +126,7 @@
 			<div class="post-footer">
 
 				<div class="post_cats l-float-left">
-					<p><span><?php multitranslate('Category', 'cws_post_under_cat'); ?>:</span><?php echo trim($output, $separator); ?></p>
+					<p><span><?php multitranslate('Chuyên mục', 'cws_post_under_cat'); ?>:</span><?php echo trim($output, $separator); ?></p>
 				</div><!--/ post-cats -->
 
 			<?php if($tag_out) : ?>

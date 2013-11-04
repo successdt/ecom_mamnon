@@ -126,7 +126,7 @@
 							<div class="entry">
 								<?php // the_content(); ?>
 								<?php the_excerpt() ?>
-								<span class="l-float-right"><a href="<?php the_permalink(); ?>" class="more link"> <?php multitranslate("Read more...", "_tr_moar"); ?> </a></span>
+								<span class="l-float-right"><a href="<?php the_permalink(); ?>" class="more link"> <?php multitranslate("Xem tiếp...", "_tr_moar"); ?> </a></span>
 							</div><!--/ entry-->
 		
 						</div><!--/ post-entry -->
@@ -139,14 +139,14 @@
 					if ($categories) { ?>
 		
 							<div class="post_cats l-float-left">
-								<span><?php multitranslate('Category', 'cws_post_under_cat'); ?>:</span>
+								<span><?php multitranslate('Chuyên mục', 'cws_post_under_cat'); ?>:</span>
 								<?php echo $categories; ?>
 							</div><!--/ post-cats -->
 		<?php 		}
 					if ($output) { ?>
 		
 							<div class="post_cats l-float-left">
-								<span><?php multitranslate('Category', 'cws_post_under_cat'); ?>:</span>
+								<span><?php multitranslate('Chuyên mục', 'cws_post_under_cat'); ?>:</span>
 								<?php echo trim($output, $separator); ?>
 							</div><!--/ post-cats -->
 		<?php 		} 

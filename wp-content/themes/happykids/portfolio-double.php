@@ -107,14 +107,14 @@
 				if ($categories) { ?>
 
 					<div class="post_cats l-float-left">
-						<span><?php multitranslate('Category', 'cws_post_under_cat'); ?>:</span>
+						<span><?php multitranslate('Chuyên mục', 'cws_post_under_cat'); ?>:</span>
 						<?php echo $categories; ?>
 					</div><!--/ post-cats -->
 <?php 			} 		
 				if ($output) { ?>
 
 					<div class="post_cats l-float-left">
-						<span><?php multitranslate('Category', 'cws_post_under_cat'); ?>:</span>
+						<span><?php multitranslate('Chuyên mục', 'cws_post_under_cat'); ?>:</span>
 						<?php echo trim($output, $separator); ?>
 					</div><!--/ post-cats -->
 <?php 			} 
