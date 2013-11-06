@@ -149,8 +149,8 @@ $rightPatternBgTop = $('#bg-level-1-right');
 
 $lpage = $('.l-page-width-after');
 
-$leftPatternBg = $('#bg-level-2-left');
-$rightPatternBg = $('#bg-level-2-right');
+$leftPatternBg = $('.bg-level-2-left');
+$rightPatternBg = $('.bg-level-2-right');
 
 function setLpage(size) {
 	$patternWidth = ($('body').width() - size) / 2;

@@ -38,8 +38,8 @@
 				
 				<?php get_template_part('slider'); ?>
 
-			<div class="bg-level-2-left" id="bg-level-2-left"></div>
-			<div class="bg-level-2-right" id="bg-level-2-right"></div>
+			<div class="bg-level-2-left" id="bg-level-2-left-2"></div>
+			<div class="bg-level-2-right" id="bg-level-2-right-2"></div>
 
 			</div><!-- .l-page-width -->
 

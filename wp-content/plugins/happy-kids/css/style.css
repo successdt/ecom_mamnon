@@ -58,7 +58,7 @@ li.news-post .title {
 	color: #ff6600;
 }
 .news-box-title {
-	padding: 5px 0;
+	padding: 10px 0;
 	background: url('../images/hcb-header.png') no-repeat right bottom;
 	
 	
@@ -234,4 +234,21 @@ body {
 #wp-statistics ul li {
 	padding: 5px;
 	border-bottom: 1px solid #3069a4;
+}
+h3.widget-title {
+	text-align: center;
+}
+.kids-front-page .bg-level-2-page-width-container .bg-level-2-left, .kids-front-page .bg-level-2-page-width-container .bg-level-2-right {
+	height: 110% !important;
+	margin-top: 140px;
+}
+#bg-level-2-left-2, #bg-level-2-right-2 {
+	margin-top: 0;
+	
+}
+#bg-level-2-left-2 {
+	background-image: url("../images/pattern_1_left_2_bg.png");
+}
+#bg-level-2-right-2 {
+	background-image: url("../images/pattern_1_right_2_bg.png");
 }
