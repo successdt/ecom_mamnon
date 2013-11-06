@@ -225,14 +225,14 @@ function large_news_box($atts){
 							
 							add_image_size( 'news-post', 100, 100, true );
 							$thumb = get_the_post_thumbnail(get_the_ID(), 'news-post', 'class=post-thumb');
-							
+							$permalink = get_permalink();
 							$str .=
-							'<a class="title" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">' .
+							'<a class="title" href="' . $permalink . 'sss" title="' . wp_specialchars(get_the_title(), 1) . '">' .
 								$thumb .
 							'</a>' .
 							'<p>' . get_the_excerpt() . '</p>
 							<div class="readmore-text">
-								<a class="pull-right" href="' . get_permalink() . '" title="' . wp_specialchars(get_the_title(), 1) . '">
+								<a class="pull-right" href="' . $permalink . '" title="' . wp_specialchars(get_the_title(), 1) . '">
 									Xem tiếp
 								</a>						
 							</div>
