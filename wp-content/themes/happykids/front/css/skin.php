@@ -10,7 +10,8 @@
 		'Georgia',
 		'FreeSans',
 		'Lucida Sans Unicode',
-		'Trebuchet MS'
+		'Trebuchet MS',
+		'butlong'
 	);
 
 	$gen_sets = theme_get_option('general', 'gen_sets');
