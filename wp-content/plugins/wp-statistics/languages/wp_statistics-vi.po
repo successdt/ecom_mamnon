@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: wp-statistics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-07 16:27+0330\n"
-"PO-Revision-Date: 2013-11-02 23:17+0700\n"
+"PO-Revision-Date: 2013-11-09 00:50+0700\n"
 "Last-Translator: Mostafa Soufi <mst404@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -50,20 +50,20 @@ msgstr "Khách đang truy cập"
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/includes/setting/settings.php:173
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/includes/setting/widget.php:12
 msgid "Today Visit"
-msgstr ""
+msgstr "Hôm nay"
 
 #: F:\Program
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/widget.php:33
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/includes/setting/settings.php:172
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/includes/setting/widget.php:15
 msgid "Today Visitor"
-msgstr ""
+msgstr "Khách hôm nay"
 
 #: F:\Program
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/widget.php:40
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/includes/setting/settings.php:175
 msgid "Yesterday Visit"
-msgstr ""
+msgstr "Hôm qua"
 
 #: F:\Program
 #: Files\xampp\htdocs\cms\wordpress\wp-content\plugins\wp-statistics/widget.php:47

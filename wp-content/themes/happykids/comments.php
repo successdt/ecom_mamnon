@@ -4,9 +4,9 @@
 	<div class="comment-list" id="comments">
 
 		<?php 
-			$noCom = multitranslate("No Comments", "_comments_no_comments", false);
-			$oneCom = multitranslate("One Comment", "_comments_one_comment", false);
-			$xCom = multitranslate("Comments", "_comments_x_comments", false);
+			$noCom = multitranslate("Không có bình luận", "_comments_no_comments", false);
+			$oneCom = multitranslate("Một bình luận", "_comments_one_comment", false);
+			$xCom = multitranslate("Bình luận", "_comments_x_comments", false);
 			comments_popup_link(
 				'<h1>' . $noCom . '</h1>',
 				'<h1>' . $oneCom . '</h1>',
@@ -37,8 +37,8 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 					<div class="navigation">
-						<div class="nav-previous"><?php previous_comments_link( '<span class="meta-nav">&larr;</span>' . multitranslate('Older Comments', '_comments_older' ) ); ?></div>
-						<div class="nav-next"><?php next_comments_link( multitranslate('Newer Comments', '_comments_newer') . '<span class="meta-nav">&rarr;</span>', '_cws_' ); ?></div>
+						<div class="nav-previous"><?php previous_comments_link( '<span class="meta-nav">&larr;</span>' . multitranslate('Bình luận cũ hơn', '_comments_older' ) ); ?></div>
+						<div class="nav-next"><?php next_comments_link( multitranslate('Bình luận mới hơn', '_comments_newer') . '<span class="meta-nav">&rarr;</span>', '_cws_' ); ?></div>
 					</div> <!-- .navigation -->
 		<?php endif; // check for comment navigation ?>
 				
@@ -53,7 +53,7 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 					<div class="navigation">
 						<div class="nav-previous"><?php previous_comments_link( '<span class="meta-nav">&larr;</span>' . multitranslate('Older Comments', '_comments_older' ) ); ?></div>
-						<div class="nav-next"><?php next_comments_link( multitranslate('Newer Comments', '_comments_newer') . '<span class="meta-nav">&rarr;</span>', '_cws_' ); ?></div>
+						<div class="nav-next"><?php next_comments_link( multitranslate('Bình luận mới hơn', '_comments_newer') . '<span class="meta-nav">&rarr;</span>', '_cws_' ); ?></div>
 					</div> <!-- .navigation -->
 		<?php endif; // check for comment navigation ?>
 
@@ -64,7 +64,7 @@
 			 */
 			if ( ! comments_open() ) :
 		?>
-			<p class="nocomments"><?php multitranslate( 'Comments are closed.' , '_comments_closed'); ?></p>
+			<p class="nocomments"><?php multitranslate( 'Khóa bình luận.' , '_comments_closed'); ?></p>
 		<?php endif; // end ! comments_open() ?>
 
 		<?php endif; // end have_comments() ?>
@@ -73,23 +73,23 @@
 		<!-- add comment -->
 		<div class="add-comment" id="addcomments">
 
-			<h1><?php multitranslate('Leave a comment', '_comments_reply')?></h1>
+			<h1><?php multitranslate('Bình luận của bạn', '_comments_reply')?></h1>
 
 			<div class="comment-form">
 
 				<?php
 
 					$fields =  array(
-						'author' => '<div class="row"><label>' . multitranslate('Name (required)', '_comments_form_name', false) . '</label><input type="text" id="author" name="author" class="inputtext" /></div>',
+						'author' => '<div class="row"><label>' . multitranslate('Tên của bạn (bắt buộc)', '_comments_form_name', false) . '</label><input type="text" id="author" name="author" class="inputtext" /></div>',
 						
-						'email' => '<div class="row"><label>' . multitranslate('Email Address (required)', '_comments_form_email', false) . '</label><input type="text" name="email" id="email" class="inputtext" /></div>',
-						'url' => '<div class="row"><label>' . multitranslate('Website URL', '_comments_form_web', false) . '</label><input type="text" name="url" id="url" class="inputtext" /></div>',
+						'email' => '<div class="row"><label>' . multitranslate('Email (bắt buộc)', '_comments_form_email', false) . '</label><input type="text" name="email" id="email" class="inputtext" /></div>',
+						'url' => '<div class="row"><label>' . multitranslate('Địa chỉ website', '_comments_form_web', false) . '</label><input type="text" name="url" id="url" class="inputtext" /></div>',
 					);  
 
 					comment_form( array(
 						'comment_field' => '<div class="row"><textarea cols="30" rows="10" name="comment" id="comment" class="textarea"></textarea></div>',
 						'id_submit' => 'post_comment',
-						'label_submit' => multitranslate( 'submit comment' , '_comments_submit', false ),
+						'label_submit' => multitranslate( 'Gửi bình luận' , '_comments_submit', false ),
 						'title_reply' => '',
 						'comment_notes_before' => '' ,
 						'comment_notes_after' => '' ,

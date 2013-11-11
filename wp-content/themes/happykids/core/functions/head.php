@@ -63,6 +63,8 @@
 				wp_enqueue_style( 'flexnav' );
 			wp_register_style( 'theme-skin-php' , get_template_directory_uri() . '/front/css/skin.php' );
 				wp_enqueue_style( 'theme-skin-php' );
+			wp_register_style( 'print' , get_template_directory_uri() . '/front/css/print.css', '', '', 'print' );
+				wp_enqueue_style( 'print' );
 	}
 
 	add_action('wp_print_styles', 'theme_enqueue_styles');

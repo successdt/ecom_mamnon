@@ -71,3 +71,45 @@
 <?php endif; ?>
 
 </div><!--/ post-footer-->
+
+	<?php
+    $GLOBALS[ 'begin_time' ] = date('Y-m-d H:i:s', get_post_time());
+
+    // Create a new filtering function that will add our where clause to the query
+    function filter_where( $where = '' ) {
+        // posts in the last 1825 days of current post
+        $where .=  " AND post_date < '".$GLOBALS[ 'begin_time' ]."'";
+        return $where;
+    }
+
+    add_filter( 'posts_where', 'filter_where' );
+
+    $args=array(
+        'post__not_in' => array(get_the_ID()),
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'showposts' => 20, // Number of related posts that will be shown.
+        'ignore_sticky_posts' => 1,
+        'cat' => $category->term_id
+    );
+    $my_query = new WP_Query($args);
+    remove_filter( 'posts_where', 'filter_where' );
+
+    if( $my_query->have_posts() ) { ?>
+	<div class="older-post">
+		<h3>Bài viết cũ hơn</h3>
+		<ul class="older-posts">           	 
+        <?php while ($my_query->have_posts()) {
+            $my_query->the_post();
+    		?>
+            <li>
+				<a href="<?php the_permalink() ?>" title="<?php get_the_title(); ?>">
+					<?php the_title();?>
+					
+				</a>
+				(<?php echo get_the_date('d/m/y'); ?>)
+			</li>
+    	<?php } ?>
+	    </ul>
+	</div>            	
+   <?php } ?>

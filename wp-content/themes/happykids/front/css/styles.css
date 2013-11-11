@@ -9200,7 +9200,8 @@ span.search-excerpt {
 		width:414px;
 	}
 	.entry-container #comments ol > .comment{
-		width:475px;
+/*		width:475px;*/
+		width: 415px ;
 	}
 	.entry-container .comment-text{
 		width:376px;
@@ -9209,8 +9210,10 @@ span.search-excerpt {
 		width:279px;
 	}
 	.entry-container .comment-form .textarea{
-		width:350px;
-		min-width:350px;
+/*		width:350px;
+		min-width:350px*/;
+		width: 240px ;
+		min-width: 205px ;
 	}
 	#sbr.content-container #post-content{
 		width:483px;

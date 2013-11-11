@@ -127,7 +127,8 @@ li.news-post .title {
 	max-width: 150px;
 }
 #respond_block {
-	display: none;
+	margin-right: 15px;
+	margin-left: 59px;
 }
 .rpwe-block a img{
 	padding: 0px;
@@ -143,9 +144,25 @@ li.news-post .title {
 	font-weight: bold;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 	#fbSEOComments {
 		display:none;
+	}
+	.fb-comments {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 959px){
+	#respond_block {
+		margin-right: 0;
+	}
+	.entry-container #comments ol > .comment {
+		width: 415px ;
+	}
+	.entry-container .comment-form .textarea {
+		width: 240px ;
+		min-width: 205px ;
 	}
 }
 .news-post .title {
@@ -251,4 +268,21 @@ h3.widget-title {
 }
 #bg-level-2-right-2 {
 	background-image: url("../images/pattern_1_right_2_bg.png");
+}
+.fb-comments {
+	text-align: center;
+	width: 100%;
+}
+.older-post {
+	display: block;
+	border-top: 1px solid #9dc1de;
+	padding: .85em 2em;
+}
+.older-post h3 {
+	border-bottom: 1px dotted #9dc1de;
+}
+.older-post li {
+	padding-left: 20px;
+	background: url('../images/star.png') no-repeat left center;
+	background-size: auto 19px;
 }

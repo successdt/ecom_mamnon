@@ -95,7 +95,7 @@ get_header();
 
 								</article>
 
-								<?php comments_template(); ?>
+								<?php comments_template(''); ?>
 
 							</div>
 					</div>
@@ -122,8 +122,7 @@ get_header();
 
 									</article>
 
-									<?php comments_template(); ?>
-
+									<?php comments_template('', true); ?>
 								</div>
 						</div>
 
