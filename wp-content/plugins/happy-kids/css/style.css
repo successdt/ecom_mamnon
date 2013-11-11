@@ -286,3 +286,6 @@ h3.widget-title {
 	background: url('../images/star.png') no-repeat left center;
 	background-size: auto 19px;
 }
+.post-title {
+	margin-bottom: 15px;
+}
