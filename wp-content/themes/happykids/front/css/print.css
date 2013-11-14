@@ -3,7 +3,7 @@ body, div, .entry-container #respond_block,.post-item {
 	background: none;
 	box-shadow: none;
 }
-#kids_main_nav, .ani-butterfly, .ani-bug, #sidebar, .fb-comments, #addcomments {
+#kids_main_nav, .ani-butterfly, .ani-bug, #sidebar, .fb-comments, #addcomments, aside, #sidebar-left, #sidebar-right {
 	display: none;
 }
 #post-content {
