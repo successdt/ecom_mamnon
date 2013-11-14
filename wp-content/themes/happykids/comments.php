@@ -5,7 +5,7 @@
 
 		<?php 
 			$noCom = multitranslate("Không có bình luận", "_comments_no_comments", false);
-			$oneCom = multitranslate("Một bình luận", "_comments_one_comment", false);
+			$oneCom = multitranslate("Bình luận", "_comments_one_comment", false);
 			$xCom = multitranslate("Bình luận", "_comments_x_comments", false);
 			comments_popup_link(
 				'<h1>' . $noCom . '</h1>',
@@ -80,14 +80,14 @@
 				<?php
 
 					$fields =  array(
-						'author' => '<div class="row"><label>' . multitranslate('Tên của bạn (bắt buộc)', '_comments_form_name', false) . '</label><input type="text" id="author" name="author" class="inputtext" /></div>',
+						'author' => '<div class="row"><label>' . multitranslate('Tên của bạn (bắt buộc)', '_comments_form_name', false) . '</label><input type="text" required="required"  id="author" name="author" class="inputtext" /></div>',
 						
-						'email' => '<div class="row"><label>' . multitranslate('Email (bắt buộc)', '_comments_form_email', false) . '</label><input type="text" name="email" id="email" class="inputtext" /></div>',
-						'url' => '<div class="row"><label>' . multitranslate('Địa chỉ website', '_comments_form_web', false) . '</label><input type="text" name="url" id="url" class="inputtext" /></div>',
+						'email' => '<div class="row"><label>' . multitranslate('Email (bắt buộc)', '_comments_form_email', false) . '</label><input name="email" id="email" class="inputtext" type="email" required="required" /></div>',
+//						'url' => '<div class="row"><label>' . multitranslate('Địa chỉ website', '_comments_form_web', false) . '</label><input type="text" name="url" id="url" class="inputtext" /></div>',
 					);  
 
 					comment_form( array(
-						'comment_field' => '<div class="row"><textarea cols="30" rows="10" name="comment" id="comment" class="textarea"></textarea></div>',
+						'comment_field' => '<div class="row"><textarea required="required" cols="30" rows="10" name="comment" id="comment" class="textarea"></textarea></div>',
 						'id_submit' => 'post_comment',
 						'label_submit' => multitranslate( 'Gửi bình luận' , '_comments_submit', false ),
 						'title_reply' => '',

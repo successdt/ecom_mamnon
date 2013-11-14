@@ -1,1 +1,20 @@
 h1, h2, h3, h4, h5, h6 {font-family: Arial, sans-serif !important;}
+body, div, .entry-container #respond_block,.post-item {
+	background: none;
+	box-shadow: none;
+}
+#kids_main_nav, .ani-butterfly, .ani-bug, #sidebar, .fb-comments, #addcomments {
+	display: none;
+}
+#post-content {
+	width: 85% !important;
+}
+#post-content .post-item {
+	width: 100% !important;
+}
+.entry-container {
+	border: none;
+}
+#kids_header #kids_logo_block {
+	margin-left: 40px;
+}
